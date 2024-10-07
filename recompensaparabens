@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Música</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000; /* Cor de fundo */
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img src="foto6.jpg" alt="Descrição da imagem" id="photo">
+    <audio id="audio" src="sua_musica.mp3" autoplay></audio>
+
+    <script>
+        // Inicia o áudio automaticamente quando a página é carregada
+        window.onload = function() {
+            var audio = document.getElementById('audio');
+            audio.play().catch(function(error) {
+                console.log('Erro ao tocar a música:', error);
+            });
+        };
+    </script>
+</body>
+</html>
